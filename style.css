@@ -1,0 +1,84 @@
+body {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    gap: 40px;
+}
+
+.svetofor {
+    width: 60px;
+    height: 160px;
+    background-color: #222;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.lamp {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #333; 
+}
+
+
+.red {
+    animation: redLight 6s infinite backwards;
+}
+
+.yellow {
+    animation: yellowLight 6s infinite forwards;
+}
+
+.green {
+    animation: greenLight 6s infinite both;
+}
+
+
+@keyframes redLight {
+    0%, 33% {
+        background-color: red;
+        box-shadow: 0 0 10px red;
+    }
+    34%, 100% {
+        background-color: #333;
+        box-shadow: none;
+    }
+}
+
+@keyframes yellowLight {
+    0%, 33%, 66%, 100% {
+        background-color: #333;
+        box-shadow: none;
+    }
+    34%, 50% {
+        background-color: yellow;
+        box-shadow: 0 0 10px yellow;
+    }
+}
+
+@keyframes greenLight {
+    0%, 50% {
+        background-color: #333;
+        box-shadow: none;
+    }
+    51%, 95% {
+        background-color: green;
+        box-shadow: 0 0 10px green;
+    }
+    96%, 100% {
+        background-color: #333;
+        box-shadow: none;
+    }
+}
